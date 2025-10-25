@@ -28,7 +28,7 @@ const ENV = process.env.NODE_ENV
     imports:[ConfigModule],
     inject:[ConfigService],
     useFactory:(config:ConfigService):TypeOrmModuleOptions=>({
-    type: 'mysql', 
+    type: config.get('DB_TYPE'), 
     //entities: [User], 
     autoLoadEntities:true,
     synchronize: false, 

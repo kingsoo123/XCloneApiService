@@ -36,6 +36,7 @@ const ENV = process.env.NODE_ENV
     username: config.get('DB_USERNAME'),
     password: config.get('DB_PASSWORD'),
     database: config.get('DB_NAME'),
+    ssl: true,
   })
 }), ProfileModule, HashtagModule, PaginationModule, ConfigModule.forFeature(authConfig), JwtModule.registerAsync(authConfig.asProvider())],
   controllers: [AppController],

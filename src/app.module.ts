@@ -9,7 +9,6 @@ import { User } from './users/user.entity';
 import { ProfileModule } from './profile/profile.module';
 import { HashtagModule } from './hashtag/hashtag.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { config } from 'process';
 import { PaginationModule } from './common/pagination/pagination.module';
 import { APP_GUARD } from '@nestjs/core';
 import { AuthorizeGuard } from './auth/guards/authorize.guards';
@@ -28,7 +27,7 @@ const ENV = process.env.NODE_ENV
     imports:[ConfigModule],
     inject:[ConfigService],
     useFactory:(config:ConfigService):TypeOrmModuleOptions=>({
-    type: config.get('DB_TYPE'), 
+    type: 'postgres', 
     //entities: [User], 
     autoLoadEntities:true,
     synchronize: false, 

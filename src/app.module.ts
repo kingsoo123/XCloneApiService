@@ -31,7 +31,7 @@ const ENV = process.env.NODE_ENV
     type: 'mysql', 
     //entities: [User], 
     autoLoadEntities:true,
-    synchronize: true, 
+    synchronize: false, 
     host: config.get('DB_HOST'),
     port: 3306,
     username: config.get('DB_USERNAME'),

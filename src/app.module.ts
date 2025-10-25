@@ -30,7 +30,7 @@ const ENV = process.env.NODE_ENV
     type: 'postgres', 
     //entities: [User], 
     autoLoadEntities:true,
-    synchronize: false, 
+    synchronize: true, 
     url: config.get('DB_HOST'),
     port: config.get('DB_PORT'),
     username: config.get('DB_USERNAME'),

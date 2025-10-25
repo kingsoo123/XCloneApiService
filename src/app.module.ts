@@ -31,7 +31,7 @@ const ENV = process.env.NODE_ENV
     //entities: [User], 
     autoLoadEntities:true,
     synchronize: false, 
-    host: config.get('DB_HOST'),
+    url: config.get('DB_HOST'),
     port: config.get('DB_PORT'),
     username: config.get('DB_USERNAME'),
     password: config.get('DB_PASSWORD'),
